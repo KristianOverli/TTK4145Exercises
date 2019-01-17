@@ -16,7 +16,7 @@ When answering the questions, remember to use all the resources at your disposal
  
  ### What kinds of problems motivates the need for concurrent execution?
  (Or phrased differently: What problems do concurrency help in solving?)
- > *Your answer here*
+ > *Some of the driving forces for concurrency are external. That is, they are imposed by the demands of the environment. In real-world systems many things are happening simultaneously and must be addressed “in real-time” by software. To do so, many real-time software systems must be “reactive.” They must respond to externally generated events which may occur at somewhat random times, in some-what random order, or both.*
  
  ### Does creating concurrent programs make the programmer's life easier? Harder? Maybe both?
  (Come back to this after you have worked on part 4 of this exercise)
@@ -29,13 +29,13 @@ When answering the questions, remember to use all the resources at your disposal
  A coroutine is a subroutine that can have multiple  hold execution and return and continue*
  
  ### Which one of these do `pthread_create()` (C/POSIX), `threading.Thread()` (Python), `go` (Go) create?
- > *Your answer here*
+ > *All the above methods create a thread*
  
  ### How does pythons Global Interpreter Lock (GIL) influence the way a python Thread behaves?
- > *Your answer here*
+ > *GIL prevents concurrent execution of threads because the interpreter is not implemented in a thread-safe manner*
  
  ### With this in mind: What is the workaround for the GIL (Hint: it's another module)?
- > *Your answer here*
+ > *You can run multiple python interpreters separately to get concurrent processes. Resource sharing can then be implemented with sockets*
  
  ### What does `func GOMAXPROCS(n int) int` change? 
- > *Your answer here*
+ > *GOMAXPROCS changes the maximum number of cpus the process can use.*
