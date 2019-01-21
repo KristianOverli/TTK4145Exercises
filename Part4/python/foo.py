@@ -22,7 +22,7 @@ def decrementingFunction():
 
 
 def main():
-    print(i)
+    global i
 
     incrementing = Thread(target = incrementingFunction, args = (),)
     decrementing = Thread(target = decrementingFunction, args = (),)
